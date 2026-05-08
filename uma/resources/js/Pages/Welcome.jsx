@@ -170,22 +170,48 @@ export default function Welcome() {
                 </motion.div>
             </nav>
 
-            {/* HERO SECTION */}
-            <section className="h-screen flex flex-col justify-center items-center text-center px-4 relative">
-                <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
+            {/* HERO SECTION WITH FLOATING ICONS FIXED */}
+            <section className="h-screen flex flex-col justify-center items-center text-center px-4 relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-full h-full -z-20">
                     <div className="absolute top-[-5%] left-[-5%] w-[70%] h-[40%] bg-blue-600/20 blur-[120px] rounded-full" />
                     <div className="absolute bottom-[-5%] right-[-5%] w-[70%] h-[40%] bg-purple-600/10 blur-[120px] rounded-full" />
                 </div>
+
+                {/* Floating Tech Rain Background */}
+                <div className="absolute inset-0 pointer-events-none z-0">
+                    {techStack.map((tech, i) => (
+                        <motion.div
+                            key={`rain-${i}`}
+                            className={`absolute ${tech.color} opacity-10 text-3xl md:text-5xl`}
+                            initial={{ top: "-10%", left: `${(i * (100 / techStack.length))}%` }}
+                            animate={{ 
+                                top: "110%", 
+                                x: [0, 25, -25, 0], 
+                                rotate: 360,
+                                opacity: [0, 0.15, 0.15, 0]
+                            }}
+                            transition={{ 
+                                duration: 12 + Math.random() * 8, 
+                                repeat: Infinity, 
+                                ease: "linear", 
+                                delay: Math.random() * 15 
+                            }}
+                        >
+                            <FontAwesomeIcon icon={tech.icon} />
+                        </motion.div>
+                    ))}
+                </div>
+
                 <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} className="z-10 w-full">
                     <h1 className="text-5xl sm:text-7xl md:text-8xl font-black mb-6 tracking-tight uppercase italic leading-none px-2 text-white">
-                        {t.hero.hi} <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-500 bg-clip-text text-transparent pr-4 md:pr-10 inline-block">Usher Missiedjan</span>
+                        {t.hero.hi} <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-500 bg-clip-text text-transparent pr-4 md:pr-10 inline-block italic">Usher Missiedjan</span>
                     </h1>
                     <p className="text-lg md:text-3xl text-gray-400 max-w-3xl mx-auto font-light tracking-wide leading-snug px-4 italic">{t.hero.sub}</p>
                 </motion.div>
             </section>
 
-            {/* TECHNICAL PROFICIENCY - IMPROVED GRID FOR 13 ITEMS */}
-            <section className="py-16 md:py-24 px-6 max-w-7xl mx-auto">
+            {/* TECHNICAL PROFICIENCY - BALANCED 13 ITEM GRID */}
+            <section className="py-16 md:py-24 px-6 max-w-7xl mx-auto relative z-10">
                 <div className="flex items-center gap-4 mb-10 md:mb-16">
                     <div className="h-8 md:h-10 w-2 bg-blue-500 rounded-full" />
                     <h2 className="text-3xl md:text-5xl font-bold italic uppercase tracking-tighter text-white">{t.proficiency}</h2>
@@ -206,7 +232,7 @@ export default function Welcome() {
             </section>
 
             {/* CORE PRINCIPLES */}
-            <section className="py-16 md:py-24 px-6 max-w-7xl mx-auto">
+            <section className="py-16 md:py-24 px-6 max-w-7xl mx-auto relative z-10">
                 <div className="flex items-center gap-4 mb-10 md:mb-16">
                     <div className="h-8 md:h-10 w-2 bg-purple-500 rounded-full" />
                     <h2 className="text-3xl md:text-5xl font-bold italic uppercase tracking-tighter text-white">{t.principles}</h2>
@@ -222,9 +248,9 @@ export default function Welcome() {
             </section>
 
             {/* EXPERTISE & PORTFOLIO */}
-            <section className="py-16 md:py-24 px-6 bg-gradient-to-b from-transparent to-slate-900/50">
+            <section className="py-16 md:py-24 px-6 bg-gradient-to-b from-transparent to-slate-900/50 relative z-10">
                 <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
-                    <div className="p-8 md:p-10 rounded-[2rem] md:rounded-[3rem] bg-slate-900 border border-slate-800 shadow-2xl flex flex-col justify-center text-white">
+                    <div className="p-8 md:p-10 rounded-[2rem] md:rounded-[3rem] bg-slate-900 border border-slate-800 shadow-2xl flex flex-col justify-center">
                         <h2 className="text-2xl md:text-4xl font-bold mb-6 flex items-center gap-4 uppercase italic text-blue-500">{t.bio.title}</h2>
                         <p className="text-gray-300 leading-relaxed text-base md:text-lg italic font-light">{t.bio.text}</p>
                     </div>
