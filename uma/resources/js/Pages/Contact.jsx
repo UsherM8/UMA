@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useForm, usePage, Link } from '@inertiajs/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane, faCheckCircle, faGlobe } from '@fortawesome/free-solid-svg-icons';
-useApp({ faReact, faLaravel });
+import { faReact, faLaravel } from '@fortawesome/free-brands-svg-icons';
 
 // --- TRANSLATIONS ---
 const translations = {

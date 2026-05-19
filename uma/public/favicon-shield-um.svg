@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="UM Tech Logo">
+  <defs>
+    <linearGradient id="gradientU" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#0ea5e9"/>
+    </linearGradient>
+    <linearGradient id="gradientM" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#cbd5e1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Donkere premium achtergrond van je site -->
+  <rect width="64" height="64" rx="16" fill="#020617"/>
+
+  <!-- Gecentreerde Container voor de letters -->
+  <g xml:space="preserve">
+    <!-- De 'U' - Perfecte dikke geometrische bocht (Links) -->
+    <path d="M14 20v14c0 6.6 5.4 12 12 12s12-5.4 12-12V20" fill="none" stroke="url(#gradientU)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- De 'M' - Strakke overlappende tech-lijnen (Rechts) -->
+    <path d="M38 44V20l6 7 6-7v24" fill="none" stroke="url(#gradientM)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
