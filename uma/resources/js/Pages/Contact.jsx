@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useForm, usePage, Link } from '@inertiajs/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane, faCheckCircle, faGlobe } from '@fortawesome/free-solid-svg-icons';
-import { faReact, faLaravel } from '@fortawesome/free-brands-svg-icons';
+useApp({ faReact, faLaravel });
 
 // --- TRANSLATIONS ---
 const translations = {
@@ -88,6 +88,7 @@ export default function Contact() {
     };
 
     return (
+        /* HIER AANGEPAST: De 'uppercase' klasse is hier aan het einde weggelaten! */
         <div className="bg-slate-950 text-white min-h-screen font-sans selection:bg-blue-500/30 overflow-x-hidden flex flex-col items-center py-24 px-6 relative">
             
             {/* Achtergrond Gradients */}
@@ -106,7 +107,7 @@ export default function Contact() {
                     </ul>
                     <button 
                         onClick={() => setLang(lang === 'nl' ? 'en' : 'nl')}
-                        className="bg-white/5 hover:bg-white/10 border border-white/10 px-3 py-1.5 rounded-full transition-all flex items-center gap-2 group"
+                        className="bg-white/5 hover:bg-white/10 border border-white/10 px-3 py-1.5 rounded-full transition-all flex items-center gap-2 group uppercase"
                     >
                         <FontAwesomeIcon icon={faGlobe} className="text-blue-400 text-[10px]" />
                         <span className="text-[10px] font-black uppercase tracking-tighter w-4 text-center">
@@ -162,7 +163,7 @@ export default function Contact() {
                                 <div className="space-y-2">
                                     <input 
                                         type="text" placeholder={t.form.name} 
-                                        className={`w-full bg-slate-900 border-none rounded-2xl p-5 text-white ring-1 ${errors.name ? 'ring-red-500' : 'ring-slate-800'} focus:ring-2 focus:ring-blue-500 outline-none uppercase font-bold text-[10px] tracking-widest`}
+                                        className={`w-full bg-slate-900 border-none rounded-2xl p-5 text-white ring-1 ${errors.name ? 'ring-red-500' : 'ring-slate-800'} focus:ring-2 focus:ring-blue-500 outline-none text-sm font-medium tracking-wide placeholder:uppercase placeholder:text-[10px] placeholder:font-bold placeholder:tracking-widest`}
                                         onChange={e => setData('name', e.target.value)} value={data.name} required 
                                     />
                                     {errors.name && <p className="text-red-500 text-[10px] uppercase font-black pl-2 italic">{errors.name}</p>}
@@ -170,7 +171,7 @@ export default function Contact() {
                                 <div className="space-y-2">
                                     <input 
                                         type="email" placeholder={t.form.email} 
-                                        className={`w-full bg-slate-900 border-none rounded-2xl p-5 text-white ring-1 ${errors.email ? 'ring-red-500' : 'ring-slate-800'} focus:ring-2 focus:ring-blue-500 outline-none uppercase font-bold text-[10px] tracking-widest`}
+                                        className={`w-full bg-slate-900 border-none rounded-2xl p-5 text-white ring-1 ${errors.email ? 'ring-red-500' : 'ring-slate-800'} focus:ring-2 focus:ring-blue-500 outline-none text-sm font-medium tracking-wide placeholder:uppercase placeholder:text-[10px] placeholder:font-bold placeholder:tracking-widest`}
                                         onChange={e => setData('email', e.target.value)} value={data.email} required 
                                     />
                                     {errors.email && <p className="text-red-500 text-[10px] uppercase font-black pl-2 italic">{errors.email}</p>}
@@ -180,7 +181,7 @@ export default function Contact() {
                             <div className="space-y-2">
                                 <input 
                                     type="text" placeholder={t.form.subject} 
-                                    className={`w-full bg-slate-900 border-none rounded-2xl p-5 text-white ring-1 ${errors.subject ? 'ring-red-500' : 'ring-slate-800'} focus:ring-2 focus:ring-blue-500 outline-none uppercase font-bold text-[10px] tracking-widest`}
+                                    className={`w-full bg-slate-900 border-none rounded-2xl p-5 text-white ring-1 ${errors.subject ? 'ring-red-500' : 'ring-slate-800'} focus:ring-2 focus:ring-blue-500 outline-none text-sm font-medium tracking-wide placeholder:uppercase placeholder:text-[10px] placeholder:font-bold placeholder:tracking-widest`}
                                     onChange={e => setData('subject', e.target.value)} value={data.subject} required 
                                 />
                             </div>
@@ -188,7 +189,7 @@ export default function Contact() {
                             <div className="space-y-2">
                                 <textarea 
                                     placeholder={t.form.message} rows="5" 
-                                    className={`w-full bg-slate-900 border-none rounded-2xl p-5 text-white ring-1 ${errors.message ? 'ring-red-500' : 'ring-slate-800'} focus:ring-2 focus:ring-blue-500 outline-none uppercase font-bold text-[10px] tracking-widest`}
+                                    className={`w-full bg-slate-900 border-none rounded-2xl p-5 text-white ring-1 ${errors.message ? 'ring-red-500' : 'ring-slate-800'} focus:ring-2 focus:ring-blue-500 outline-none text-sm font-medium tracking-wide placeholder:uppercase placeholder:text-[10px] placeholder:font-bold placeholder:tracking-widest`}
                                     onChange={e => setData('message', e.target.value)} value={data.message} required 
                                 />
                             </div>
@@ -209,7 +210,7 @@ export default function Contact() {
             </motion.div>
 
             {/* --- FOOTER CREDITS --- */}
-            <div className="mt-20 text-center opacity-40">
+            <div className="mt-20 text-center opacity-40 uppercase">
                 <p className="text-[10px] uppercase tracking-[0.3em] font-bold italic">
                     Crafted with <FontAwesomeIcon icon={faReact} className="mx-1 text-cyan-400" /> & <FontAwesomeIcon icon={faLaravel} className="mx-1 text-red-500" /> by 
                     <span className="text-white ml-2">Usher Missiedjan</span>
