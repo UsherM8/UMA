@@ -2,13 +2,28 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, usePage } from '@inertiajs/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
-    faLinkedin, faPhp, faReact, faLaravel, faJs, faCss3Alt, faJava, faWindows, faGitAlt, faNodeJs, faLinux 
-} from '@fortawesome/free-brands-svg-icons';
-import { 
-    faDownload, faExternalLinkAlt, faUser, faDatabase, faLeaf, faCube, 
-    faHeart, faGlobe, faUsers, faSync, faShieldAlt, faGem, faLock, faInfinity 
-} from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons/faLinkedin';
+import { faPhp } from '@fortawesome/free-brands-svg-icons/faPhp';
+import { faReact } from '@fortawesome/free-brands-svg-icons/faReact';
+import { faLaravel } from '@fortawesome/free-brands-svg-icons/faLaravel';
+import { faJs } from '@fortawesome/free-brands-svg-icons/faJs';
+import { faCss3Alt } from '@fortawesome/free-brands-svg-icons/faCss3Alt';
+import { faJava } from '@fortawesome/free-brands-svg-icons/faJava';
+import { faWindows } from '@fortawesome/free-brands-svg-icons/faWindows';
+import { faGitAlt } from '@fortawesome/free-brands-svg-icons/faGitAlt';
+import { faNodeJs } from '@fortawesome/free-brands-svg-icons/faNodeJs';
+import { faLinux } from '@fortawesome/free-brands-svg-icons/faLinux';
+import { faDownload } from '@fortawesome/free-solid-svg-icons/faDownload';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons/faExternalLinkAlt';
+import { faDatabase } from '@fortawesome/free-solid-svg-icons/faDatabase';
+import { faLeaf } from '@fortawesome/free-solid-svg-icons/faLeaf';
+import { faCube } from '@fortawesome/free-solid-svg-icons/faCube';
+import { faGlobe } from '@fortawesome/free-solid-svg-icons/faGlobe';
+import { faUsers } from '@fortawesome/free-solid-svg-icons/faUsers';
+import { faSync } from '@fortawesome/free-solid-svg-icons/faSync';
+import { faGem } from '@fortawesome/free-solid-svg-icons/faGem';
+import { faLock } from '@fortawesome/free-solid-svg-icons/faLock';
+import { faInfinity } from '@fortawesome/free-solid-svg-icons/faInfinity';
 
 // --- TRANSLATIONS OBJECT ---
 const translations = {
@@ -256,7 +271,18 @@ export default function Welcome() {
                     </div>
                     <div className="group relative rounded-[2rem] md:rounded-[3rem] overflow-hidden bg-slate-900 border border-slate-800 h-[450px] md:h-[550px] flex flex-col transition-all duration-500 hover:border-blue-500 shadow-2xl">
                         <div className="absolute inset-0 z-0">
-                            <img src="/usher1.jpg" alt="Usher Missiedjan" className="w-full h-full object-cover object-top transition-transform duration-[1.5s] ease-out group-hover:scale-110" />
+                            <picture>
+                                <source srcSet="/usher1.webp" type="image/webp" />
+                                <img
+                                    src="/usher1.jpg"
+                                    alt="Usher Missiedjan"
+                                    width={900}
+                                    height={1350}
+                                    loading="lazy"
+                                    decoding="async"
+                                    className="w-full h-full object-cover object-top transition-transform duration-[1.5s] ease-out group-hover:scale-110"
+                                />
+                            </picture>
                             <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent opacity-90 z-10" />
                             <div className="absolute inset-0 bg-slate-950/10 group-hover:opacity-0 transition-opacity duration-500 z-10" />
                         </div>

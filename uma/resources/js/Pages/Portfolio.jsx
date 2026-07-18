@@ -2,12 +2,21 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from '@inertiajs/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
-    faCode, faGlobe, faDatabase, faMicrochip, faShieldAlt, faCalculator 
-} from '@fortawesome/free-solid-svg-icons';
-import { 
-    faGithub, faReact, faLaravel, faPhp, faJs, faJava, faWindows, faNodeJs, faVuejs 
-} from '@fortawesome/free-brands-svg-icons';
+import { faCode } from '@fortawesome/free-solid-svg-icons/faCode';
+import { faGlobe } from '@fortawesome/free-solid-svg-icons/faGlobe';
+import { faDatabase } from '@fortawesome/free-solid-svg-icons/faDatabase';
+import { faMicrochip } from '@fortawesome/free-solid-svg-icons/faMicrochip';
+import { faShieldAlt } from '@fortawesome/free-solid-svg-icons/faShieldAlt';
+import { faCalculator } from '@fortawesome/free-solid-svg-icons/faCalculator';
+import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
+import { faReact } from '@fortawesome/free-brands-svg-icons/faReact';
+import { faLaravel } from '@fortawesome/free-brands-svg-icons/faLaravel';
+import { faPhp } from '@fortawesome/free-brands-svg-icons/faPhp';
+import { faJs } from '@fortawesome/free-brands-svg-icons/faJs';
+import { faJava } from '@fortawesome/free-brands-svg-icons/faJava';
+import { faWindows } from '@fortawesome/free-brands-svg-icons/faWindows';
+import { faNodeJs } from '@fortawesome/free-brands-svg-icons/faNodeJs';
+import { faVuejs } from '@fortawesome/free-brands-svg-icons/faVuejs';
 
 const translations = {
     en: {

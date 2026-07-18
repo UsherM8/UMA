@@ -2,8 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useForm, usePage, Link } from '@inertiajs/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPaperPlane, faCheckCircle, faGlobe } from '@fortawesome/free-solid-svg-icons';
-import { faReact, faLaravel } from '@fortawesome/free-brands-svg-icons';
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons/faPaperPlane';
+import { faCheckCircle } from '@fortawesome/free-solid-svg-icons/faCheckCircle';
+import { faGlobe } from '@fortawesome/free-solid-svg-icons/faGlobe';
+import { faReact } from '@fortawesome/free-brands-svg-icons/faReact';
+import { faLaravel } from '@fortawesome/free-brands-svg-icons/faLaravel';
 
 // --- TRANSLATIONS ---
 const translations = {
