@@ -64,17 +64,17 @@ const translations = {
         footer: { crafted: "Gemaakt met" },
         projects: [
             {
-                title: "Bodegro Care Portal",
+                title: "Care Portal",
                 description: "Zorgportaal waarbij patiënten via een op maat gemaakt algoritme automatisch gekoppeld worden aan medische protocollen. Gebouwd met strikte data-isolatie.",
                 tech: ["PHP", "Laravel", "Custom Algorithm", "Healthcare Security"]
             },
             {
-                title: "TaxModel Onboarding Portal",
+                title: "Onboarding Portal",
                 description: "Fullstack applicatie binnen een Scrum/DevOps team. Verantwoordelijk voor backend upgrade (.NET 6 naar 8) en het oplossen van mismatches.",
                 tech: [".NET 8", "Vue 3", "DevOps", "Scrum"]
             },
             {
-                title: "EasyFlex Matching Engine",
+                title: "Matching Engine",
                 description: "Een .NET MVC applicatie die flexwerkers koppelt aan klussen via een algoritme dat afstand, leeftijd en ervaring meeweegt.",
                 tech: [".NET MVC", "C#", "Matching Logic", "CRUD"]
             },
